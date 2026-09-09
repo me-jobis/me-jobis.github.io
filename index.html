@@ -1,195 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jobis Bijo — Aspiring Mechatronics Engineer specializing in robotics, automation, embedded systems and IoT.">
-  <title>Jobis Bijo | Mechatronics Engineer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b18">
+  <meta name="description" content="Jobis Bijo — Aspiring Mechatronics Engineer focused on robotics, automation, embedded systems and IoT.">
+  <title>Jobis Bijo | Mechatronics • Robotics • Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="logo" href="#home">JB<span>.</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Jobis Bijo home"><span>&lt;</span> JB <span>/&gt;</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
     </nav>
-    <a class="nav-btn" href="Jobis_Bijo_Resume.pdf" target="_blank">Resume ↗</a>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">☼</button>
+      <a class="resume-mini" href="Jobis_Bijo_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
   </header>
 
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </div>
+
   <main>
-    <section id="home" class="hero">
-      <div class="hero-grid"></div>
-      <div class="hero-content">
-        <p class="eyebrow">MECHATRONICS • ROBOTICS • AUTOMATION</p>
-        <h1>Building systems<br>that <span>move.</span></h1>
-        <p class="hero-text">
-          I'm <strong>Jobis Bijo</strong>, a B.Tech (Honors) Mechatronics Engineering student
-          with a Minor in IoT, focused on robotics, automation, embedded systems and intelligent machines.
-        </p>
-        <div class="hero-actions">
-          <a class="primary-btn" href="#projects">Explore my work <span>↓</span></a>
-          <a class="secondary-btn" href="https://github.com/me-jobis" target="_blank" rel="noopener">GitHub ↗</a>
+    <section class="hero section-pad" id="home">
+      <div class="hero-copy reveal">
+        <p class="kicker">HELLO, I'M</p>
+        <h1>Jobis <span>Bijo.</span></h1>
+        <div class="role-line"><span id="typedRole">Aspiring Mechatronics Engineer</span><span class="cursor">|</span></div>
+        <p class="hero-sub">Robotics <i>•</i> Automation <i>•</i> Embedded Systems <i>•</i> IoT</p>
+        <p class="hero-description">B.Tech (Honors) Mechatronics Engineering student with a Minor in IoT, building practical systems across embedded hardware, robotics, automation and electromechanical prototyping.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#projects">View Projects <span>↘</span></a>
+          <a class="btn ghost" href="#contact">Get In Touch <span>↗</span></a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/me-jobis" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+          <a href="https://www.linkedin.com/in/jobis-bijo" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="mailto:jobisbijoy123@gmail.com" aria-label="Email">@</a>
         </div>
       </div>
-      <div class="hero-orbit">
-        <div class="orbit orbit-1"></div>
-        <div class="orbit orbit-2"></div>
-        <div class="core"><span>ME</span></div>
-        <span class="node node-a"></span>
-        <span class="node node-b"></span>
-        <span class="node node-c"></span>
-      </div>
-      <div class="scroll">SCROLL TO EXPLORE ↓</div>
-    </section>
 
-    <section id="about" class="section about">
-      <div class="section-label">01 / ABOUT</div>
-      <div>
-        <h2>Engineering curiosity<br>into <em>working systems.</em></h2>
-        <p class="lead">
-          I'm a B.Tech (Honors) Mechatronics Engineering student at Jyothi Engineering College,
-          pursuing a Minor in IoT. My work sits at the intersection of mechanical systems,
-          electronics, programming and automation.
-        </p>
-        <p>
-          I've built Arduino- and ESP32-based robotics and automation projects and gained
-          industrial exposure through relay manufacturing and Industry 4.0 training. I'm currently
-          looking for opportunities in robotics, automation, embedded systems, IoT and related engineering roles.
-        </p>
-        <div class="stats">
-          <div><strong>7.6</strong><span>CGPA / 10</span></div>
-          <div><strong>2024–28</strong><span>B.Tech Timeline</span></div>
-          <div><strong>1st</strong><span>Ideathon Place</span></div>
+      <div class="hero-visual reveal delay-1" aria-label="Mechatronics engineering visual">
+        <div class="visual-glow"></div>
+        <div class="engineering-card">
+          <div class="card-top"><span>MECHATRONICS.SYS</span><span>● ONLINE</span></div>
+          <div class="machine">
+            <div class="ring ring-a"></div><div class="ring ring-b"></div><div class="ring ring-c"></div>
+            <div class="gear gear-a"></div><div class="gear gear-b"></div>
+            <div class="chip"><span>JB</span><small>CTRL</small></div>
+            <i class="trace t1"></i><i class="trace t2"></i><i class="trace t3"></i><i class="trace t4"></i>
+            <span class="sensor s1">IMU</span><span class="sensor s2">MCU</span><span class="sensor s3">MTR</span>
+          </div>
+          <div class="telemetry"><span>ROBOTICS</span><b>01</b><span>AUTOMATION</span><b>02</b><span>IoT</span><b>03</b></div>
         </div>
+        <div class="floating-badge"><span class="dot"></span> Aspiring Mechatronics Engineer</div>
       </div>
+      <a class="scroll-hint" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
     </section>
 
-    <section id="skills" class="section dark-section">
-      <div class="section-label">02 / TOOLKIT</div>
-      <div class="skills-wrap">
-        <h2>My engineering<br><em>toolkit.</em></h2>
-        <div class="skill-grid">
-          <article><span>01</span><h3>Programming</h3><p>C<br>Python</p></article>
-          <article><span>02</span><h3>Embedded</h3><p>Arduino<br>ESP32<br>STM32</p></article>
-          <article><span>03</span><h3>Engineering Software</h3><p>MATLAB<br>Fusion 360<br>KiCad</p></article>
-          <article><span>04</span><h3>Robotics & Automation</h3><p>Industrial Automation<br>Sensors & Actuators<br>Motor Control</p></article>
-          <article><span>05</span><h3>IoT & AI</h3><p>IoT Protocols<br>Edge AI</p></article>
+    <section class="section-pad about" id="about">
+      <div class="section-heading reveal"><span>01</span><p>ABOUT ME</p></div>
+      <div class="about-grid">
+        <div class="reveal">
+          <h2>Turning curiosity into <em>working systems.</em></h2>
+          <p class="lead">I'm a Mechatronics Engineering student at Jyothi Engineering College, pursuing a Minor in IoT. I enjoy working where mechanics, electronics, programming and automation meet.</p>
+          <p>My hands-on work includes Arduino- and ESP32-based robotics and automation projects, plus industrial exposure through electromagnetic relay production and Industry 4.0 training.</p>
+          <a class="text-link" href="Jobis_Bijo_Resume.pdf" target="_blank" rel="noopener">Download Resume <span>↗</span></a>
+        </div>
+        <div class="about-cards reveal delay-1">
+          <div class="info-card"><span class="card-icon">⌖</span><div><small>BASED IN</small><strong>Thrissur, Kerala</strong></div></div>
+          <div class="info-card"><span class="card-icon">⌁</span><div><small>EDUCATION</small><strong>B.Tech (Honors) • Minor in IoT</strong></div></div>
+          <div class="info-card"><span class="card-icon">◈</span><div><small>CGPA</small><strong>7.4 / 10</strong></div></div>
+          <div class="info-card"><span class="card-icon">✦</span><div><small>FOCUS</small><strong>Robotics • Automation • Embedded</strong></div></div>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section">
-      <div class="section-label">03 / EXPERIENCE</div>
+    <section class="dark-section section-pad" id="skills">
+      <div class="section-heading reveal"><span>02</span><p>SKILLS & TECHNOLOGIES</p></div>
+      <div class="skills-intro reveal"><h2>My engineering <em>toolkit.</em></h2><p>Tools and domains from my current coursework, projects and hands-on training.</p></div>
+      <div class="skill-grid">
+        <article class="skill-card reveal"><span class="skill-no">01</span><div class="skill-symbol">C/</div><h3>Programming</h3><p>C<br>Python</p></article>
+        <article class="skill-card reveal delay-1"><span class="skill-no">02</span><div class="skill-symbol">µC</div><h3>Microcontrollers</h3><p>Arduino<br>ESP32<br>STM32</p></article>
+        <article class="skill-card reveal delay-2"><span class="skill-no">03</span><div class="skill-symbol">⌘</div><h3>Engineering Software</h3><p>MATLAB<br>Fusion 360<br>KiCad</p></article>
+        <article class="skill-card reveal"><span class="skill-no">04</span><div class="skill-symbol">⚙</div><h3>Robotics & Automation</h3><p>Industrial Automation<br>Sensors & Actuators<br>Motor Control</p></article>
+        <article class="skill-card reveal delay-1"><span class="skill-no">05</span><div class="skill-symbol">◌</div><h3>IoT & AI</h3><p>IoT Protocols<br>Edge AI</p></article>
+      </div>
+    </section>
+
+    <section class="section-pad projects-section" id="projects">
+      <div class="section-heading reveal"><span>03</span><p>SELECTED PROJECTS</p></div>
+      <div class="section-title-row reveal"><h2>Things I've <em>built.</em></h2><p>Hands-on builds combining sensing, control, embedded hardware and mechanical design.</p></div>
+      <div class="project-grid">
+        <article class="project-card featured reveal">
+          <div class="project-art robot-art"><span class="art-label">ESP32 / IMU</span><div class="bot"><i></i><i></i><b></b></div><div class="wire w1"></div><div class="wire w2"></div></div>
+          <div class="project-body"><div class="project-meta"><span>01</span><span>ROBOTICS</span></div><h3>Gesture-Controlled Robot</h3><p>Built a mobile robot using an ESP32, MPU6050 IMU and L298N motor driver; motion control uses accelerometer and gyroscope data.</p><div class="tags"><span>ESP32</span><span>MPU6050</span><span>L298N</span></div></div>
+        </article>
+        <article class="project-card reveal delay-1">
+          <div class="project-art irrigation-art"><span class="art-label">SENSOR / CONTROL</span><div class="soil"><i></i><i></i><i></i></div><div class="plant">♧</div><div class="drop d1">•</div><div class="drop d2">•</div></div>
+          <div class="project-body"><div class="project-meta"><span>02</span><span>AUTOMATION</span></div><h3>Automated Irrigation System</h3><p>Arduino-based irrigation system with soil-moisture sensing, automatic watering and visual status indication.</p><div class="tags"><span>Arduino</span><span>Soil Sensor</span><span>Tinkercad</span></div></div>
+        </article>
+        <article class="project-card reveal delay-2">
+          <div class="project-art dryer-art"><span class="art-label">PIR / SWITCHING</span><div class="hand">✋</div><div class="air">)))</div><div class="sensor-dot"></div></div>
+          <div class="project-body"><div class="project-meta"><span>03</span><span>SENSING</span></div><h3>Motion-Activated Hand Dryer</h3><p>Developed a PIR-based automatic hand dryer using a transistor switching circuit for sensor-driven operation.</p><div class="tags"><span>PIR Sensor</span><span>Transistor</span></div></div>
+        </article>
+        <article class="project-card reveal delay-1">
+          <div class="project-art cad-art"><span class="art-label">CAD / FABRICATION</span><div class="stand"><span></span><span></span><span></span></div><div class="phone"></div></div>
+          <div class="project-body"><div class="project-meta"><span>04</span><span>3D DESIGN</span></div><h3>Multipurpose 3D-Printed Paperweight</h3><p>Designed and fabricated a multifunctional product integrating a paperweight, phone stand and pen holder.</p><div class="tags"><span>Fusion 360</span><span>3D Printing</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="dark-section section-pad" id="experience">
+      <div class="section-heading reveal"><span>04</span><p>EXPERIENCE</p></div>
+      <div class="section-title-row reveal"><h2>Learning by <em>doing.</em></h2><p>Industrial and practical exposure alongside engineering studies.</p></div>
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="date">JUN 2026</div>
-          <div>
-            <h3>Production Intern</h3>
-            <h4>SFO Technologies Pvt. Ltd. — Transformers & Inductors Division</h4>
-            <p>Supported assembly and production of electromagnetic relays used in smart energy meters.</p>
-            <ul>
-              <li>Performed actuator spring insertion, component fitting, brass-component assembly and terminal pin adjustment.</li>
-              <li>Worked with current transformer components and performed continuity and strength checks.</li>
-              <li>Gained exposure to single-phase, three-phase and neutral relay variants.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="date">JUN–JUL 2025</div>
-          <div>
-            <h3>Industry 4.0 Intern</h3>
-            <h4>TATA JYOTHI IIIC — Jyothi Engineering College</h4>
-            <p>Completed hands-on training in embedded systems, robotics, industrial automation, CNC machining and automotive systems.</p>
-          </div>
-        </div>
+        <article class="timeline-card reveal"><div class="timeline-date">08 JUN — 22 JUN 2026</div><div class="timeline-marker"></div><div><p class="eyebrow-small">PRODUCTION INTERN</p><h3>SFO Technologies Pvt. Ltd.</h3><h4>Transformers and Inductors Division</h4><p>Supported assembly and production of electromagnetic relays used in smart energy meters. Worked on actuator spring insertion, component fitting, brass components with fixed copper blades and terminal pin adjustment.</p><p>Worked with current transformer components and performed continuity and strength checks across single-phase, three-phase and neutral relay variants.</p></div></article>
+        <article class="timeline-card reveal delay-1"><div class="timeline-date">23 JUN — 01 JUL 2025</div><div class="timeline-marker"></div><div><p class="eyebrow-small">INDUSTRY 4.0 INTERN</p><h3>TATA JYOTHI IIIC</h3><h4>Jyothi Engineering College</h4><p>Completed hands-on training in embedded systems, robotics, industrial automation, CNC machining and automotive systems, with practical Industry 4.0 applications across engineering and manufacturing.</p></div></article>
       </div>
     </section>
 
-    <section id="projects" class="section projects-section">
-      <div class="section-label">04 / PROJECTS</div>
-      <div class="project-head">
-        <h2>Things I've<br><em>built.</em></h2>
-        <p>Hands-on projects combining sensing, control, embedded hardware and mechanical design.</p>
+    <section class="section-pad achievements" id="achievements">
+      <div class="section-heading reveal"><span>05</span><p>ACHIEVEMENTS & TRAINING</p></div>
+      <div class="achievement-grid">
+        <div class="achievement-main reveal"><div class="trophy">01</div><p class="eyebrow-small">HIGHLIGHT</p><h2>1st Place</h2><h3>Real World Solutions Ideathon</h3><p>Techletics 4.0 — Christ College of Engineering, 2026</p></div>
+        <div class="achievement-list reveal delay-1">
+          <div><b>02</b><span><strong>NASA International Space Apps Challenge</strong><small>Participant • 2024 & 2025</small></span></div>
+          <div><b>03</b><span><strong>ISRO Hackathon</strong><small>Participant • 2025</small></span></div>
+          <div><b>04</b><span><strong>YIP Hackathon</strong><small>Participant • 2025</small></span></div>
+        </div>
       </div>
-      <div class="projects">
-        <article class="project-card featured">
-          <div class="project-number">01</div>
-          <div class="project-icon">◉</div>
-          <h3>Gesture-Controlled Robot</h3>
-          <p>Built a mobile robot using an ESP32, MPU6050 IMU and L298N motor driver, with motion control based on accelerometer and gyroscope data.</p>
-          <div class="tags"><span>ESP32</span><span>MPU6050</span><span>L298N</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-number">02</div>
-          <div class="project-icon">⌁</div>
-          <h3>Automated Irrigation System</h3>
-          <p>Arduino-based irrigation system with soil-moisture sensing, automatic watering and visual status indication.</p>
-          <div class="tags"><span>Arduino</span><span>Sensor</span><span>Tinkercad</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-number">03</div>
-          <div class="project-icon">◌</div>
-          <h3>Motion-Activated Hand Dryer</h3>
-          <p>PIR-based automatic hand dryer using a transistor switching circuit for sensor-driven operation.</p>
-          <div class="tags"><span>PIR</span><span>Transistor</span><span>Automation</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-number">04</div>
-          <div class="project-icon">△</div>
-          <h3>3D-Printed Multipurpose Paperweight</h3>
-          <p>Designed and fabricated a multifunctional product combining a paperweight, phone stand and pen holder.</p>
-          <div class="tags"><span>Fusion 360</span><span>3D Printing</span><span>PLA</span></div>
-        </article>
+      <div class="cert-grid reveal">
+        <div><span>WORKSHOP</span><strong>Hands-On Edge AI Workshop</strong><small>DigiToad Technologies Pvt. Ltd. × STMicroelectronics • 2026</small></div>
+        <div><span>TRAINING</span><strong>MATLAB for Scientific Computing and Network Analysis</strong><small>CoreRel Technologies • 2025</small></div>
+        <div><span>TRAINING</span><strong>MATLAB Essentials: From Concepts to Simulation</strong><small>IEEE PELS SBC JECC • 2026</small></div>
       </div>
     </section>
 
-    <section id="achievements" class="section dark-section achievements">
-      <div class="section-label">05 / ACHIEVEMENTS</div>
-      <div>
-        <h2>Learning beyond<br>the <em>classroom.</em></h2>
-        <div class="achievement-list">
-          <div><b>01</b><span><strong>1st Place</strong> — Real World Solutions Ideathon, Techletics 4.0, Christ College of Engineering (2026)</span></div>
-          <div><b>02</b><span><strong>NASA International Space Apps Challenge</strong> — Participant (2024 & 2025)</span></div>
-          <div><b>03</b><span><strong>ISRO Hackathon</strong> — Participant (2025)</span></div>
-          <div><b>04</b><span><strong>YIP Hackathon</strong> — Participant (2025)</span></div>
-        </div>
-        <div class="certs">
-          <p><span>Training</span> Hands-On Edge AI Workshop — DigiToad Technologies × STMicroelectronics</p>
-          <p><span>Training</span> MATLAB for Scientific Computing and Network Analysis — CoreRel Technologies</p>
-          <p><span>Training</span> MATLAB Essentials: From Concepts to Simulation — IEEE PELS SBC JECC</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section involvement">
-      <div class="section-label">06 / INVOLVEMENT</div>
+    <section class="dark-section section-pad involvement">
+      <div class="section-heading reveal"><span>06</span><p>LEADERSHIP & ACTIVITIES</p></div>
       <div class="involvement-grid">
-        <div><span>IEEE WIE AG JECC</span><strong>Executive Committee Member</strong></div>
-        <div><span>IEEE SPS SBC JECC</span><strong>Executive Committee Member</strong></div>
-        <div><span>NSS</span><strong>Volunteer — Unit 542 & Unit 140</strong></div>
+        <div class="involve-card reveal"><span>IEEE WIE AG JECC</span><strong>Executive Committee Member</strong><small>2025</small></div>
+        <div class="involve-card reveal delay-1"><span>IEEE SPS SBC JECC</span><strong>Executive Committee Member</strong><small>Present</small></div>
+        <div class="involve-card reveal delay-2"><span>NSS</span><strong>Volunteer</strong><small>Unit 425 (2022–2024) & Unit 140 (2025–Present)</small></div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <p class="eyebrow">LET'S BUILD SOMETHING</p>
-      <h2>Have a project,<br>opportunity or idea?</h2>
-      <a class="email" href="mailto:jobisbijoy123@gmail.com">jobisbijoy123@gmail.com ↗</a>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/jobis-bijo" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://github.com/me-jobis" target="_blank" rel="noopener">GitHub ↗</a>
+    <section class="section-pad github-section">
+      <div class="github-card reveal">
+        <div><span class="github-mark">GH</span><p class="eyebrow-small">OPEN SOURCE / BUILDS</p><h2>Follow the work on <em>GitHub.</em></h2><p>Explore my repositories, experiments and engineering projects.</p></div>
+        <div class="github-side"><div class="repo-lines"><i></i><i></i><i></i><i></i></div><a class="btn primary" href="https://github.com/me-jobis" target="_blank" rel="noopener">Visit GitHub Profile ↗</a></div>
       </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-inner reveal"><p class="kicker">LET'S BUILD SOMETHING</p><h2>Have a project,<br>opportunity or idea?</h2><a class="email" href="mailto:jobisbijoy123@gmail.com">jobisbijoy123@gmail.com <span>↗</span></a><div class="contact-links"><a href="https://www.linkedin.com/in/jobis-bijo" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/me-jobis" target="_blank" rel="noopener">GitHub ↗</a><a href="tel:+918304807560">+91 8304807560</a></div></div>
     </section>
   </main>
 
-  <footer>
-    <span>© 2026 JOBIS BIJO</span>
-    <span>MECHATRONICS • AUTOMATION • ROBOTICS</span>
-  </footer>
+  <footer><span>© 2026 JOBIS BIJO</span><span>MECHATRONICS • AUTOMATION • ROBOTICS • IoT</span><a href="#top">BACK TO TOP ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
