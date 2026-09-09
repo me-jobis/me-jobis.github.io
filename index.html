@@ -32,6 +32,8 @@
     <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
   </div>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
   <main>
     <section class="hero section-pad" id="home">
       <div class="hero-copy reveal">
@@ -51,16 +53,69 @@
         </div>
       </div>
 
-      <div class="hero-visual reveal delay-1" aria-label="Mechatronics engineering visual">
+      <div class="hero-visual reveal delay-1" aria-label="Animated industrial robotic arm and automation system">
         <div class="visual-glow"></div>
         <div class="engineering-card">
           <div class="card-top"><span>MECHATRONICS.SYS</span><span>● ONLINE</span></div>
           <div class="machine">
             <div class="ring ring-a"></div><div class="ring ring-b"></div><div class="ring ring-c"></div>
-            <div class="gear gear-a"></div><div class="gear gear-b"></div>
-            <div class="chip"><span>JB</span><small>CTRL</small></div>
-            <i class="trace t1"></i><i class="trace t2"></i><i class="trace t3"></i><i class="trace t4"></i>
-            <span class="sensor s1">IMU</span><span class="sensor s2">MCU</span><span class="sensor s3">MTR</span>
+            <div class="motion-orbit"></div>
+            <div class="robot-stage">
+              <svg class="robot-arm-v2" viewBox="0 0 520 390" role="img" aria-label="Stylized animated industrial robotic arm">
+                <defs>
+                  <linearGradient id="robotShell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c6b8ff"/><stop offset=".28" stop-color="#8e73ff"/><stop offset=".68" stop-color="#5c6fe1"/><stop offset="1" stop-color="#302b69"/></linearGradient>
+                  <linearGradient id="robotEdge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5546b9"/><stop offset=".5" stop-color="#b39dff"/><stop offset="1" stop-color="#4d63cf"/></linearGradient>
+                  <linearGradient id="robotDark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#242342"/><stop offset="1" stop-color="#0a0d1b"/></linearGradient>
+                  <filter id="violetGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                <ellipse cx="260" cy="350" rx="145" ry="25" fill="#070a15" stroke="#6e61c8" opacity=".9"/>
+                <ellipse cx="260" cy="347" rx="105" ry="14" fill="none" stroke="#8f79ff" stroke-dasharray="3 8" opacity=".6"/>
+                <path d="M130 350H390" stroke="#7f70e9" opacity=".25"/>
+                <g class="arm-base-v2">
+                  <path d="M190 315 L205 278 Q210 268 222 266 H298 Q310 268 315 278 L330 315 Z" fill="url(#robotDark)" stroke="#7f6df0" stroke-width="2"/>
+                  <path d="M215 278 H305 L295 260 H225 Z" fill="url(#robotShell)" stroke="#b09cff" stroke-width="2"/>
+                  <circle cx="260" cy="260" r="34" fill="#111426" stroke="url(#robotEdge)" stroke-width="7"/>
+                  <circle cx="260" cy="260" r="17" fill="#080b18" stroke="#9b83ff" stroke-width="3"/>
+                  <circle cx="260" cy="260" r="6" fill="#73e6b2" filter="url(#violetGlow)"/>
+                </g>
+                <g class="joint-shoulder-v2">
+                  <path d="M227 260 L214 215 Q211 201 221 190 L244 169 Q255 160 270 166 L292 178 Q302 184 300 198 L287 250 Q284 263 271 267 Z" fill="url(#robotShell)" stroke="#a995ff" stroke-width="2"/>
+                  <path d="M235 225 L225 202 L244 181 L263 190 L268 222 Z" fill="#26254a" opacity=".9"/>
+                  <circle cx="259" cy="177" r="25" fill="#111426" stroke="#9179ff" stroke-width="5"/>
+                  <circle cx="259" cy="177" r="12" fill="#090c18" stroke="#b4a5ff" stroke-width="2"/>
+                  <circle cx="259" cy="177" r="4" fill="#73e6b2"/>
+                </g>
+                <g class="joint-upper-v2">
+                  <path d="M242 174 L238 90 Q239 77 251 70 L274 59 Q285 55 293 64 L312 84 Q319 92 315 104 L296 178 Q292 190 279 191 L257 188 Q243 186 242 174 Z" fill="url(#robotShell)" stroke="#a995ff" stroke-width="2"/>
+                  <path d="M260 82 L276 72 L299 91 L285 158 L262 152 Z" fill="url(#robotDark)" stroke="#625ac1"/>
+                  <path d="M250 91 L269 83" stroke="#e0d9ff" opacity=".45" stroke-width="3"/>
+                  <circle cx="277" cy="72" r="22" fill="#111426" stroke="#8f76ff" stroke-width="5"/>
+                  <circle cx="277" cy="72" r="10" fill="#090c18" stroke="#b4a5ff" stroke-width="2"/>
+                </g>
+                <g class="joint-forearm-v2">
+                  <path d="M274 73 L303 43 Q310 35 322 38 L399 73 Q411 79 409 91 L399 109 Q395 118 383 116 L302 91 Q290 87 286 79 Z" fill="url(#robotShell)" stroke="#a995ff" stroke-width="2"/>
+                  <path d="M316 52 L385 79 L379 101 L310 78 Z" fill="url(#robotDark)" stroke="#625ac1"/>
+                  <path d="M322 48 L382 70" stroke="#e1dbff" opacity=".35" stroke-width="3"/>
+                  <circle cx="399" cy="94" r="20" fill="#111426" stroke="#8f76ff" stroke-width="5"/>
+                  <circle cx="399" cy="94" r="9" fill="#090c18" stroke="#b4a5ff" stroke-width="2"/>
+                </g>
+                <g class="joint-wrist-v2">
+                  <path d="M397 94 L428 101 L439 116 L430 132 L410 128 L398 112 Z" fill="url(#robotShell)" stroke="#a995ff" stroke-width="2"/>
+                  <circle cx="434" cy="121" r="13" fill="#101326" stroke="#8f76ff" stroke-width="4"/>
+                  <path d="M436 131 L451 146 L447 151 L430 136 Z" fill="url(#robotShell)" stroke="#9c88ff" stroke-width="2"/>
+                  <path d="M448 146 L465 140 L470 146 L453 155 Z" fill="url(#robotShell)" stroke="#a995ff" stroke-width="2"/>
+                  <path d="M448 146 L456 160 L451 164 L442 152 Z" fill="url(#robotShell)" stroke="#a995ff" stroke-width="2"/>
+                </g>
+                <path class="arm-motion-trail" d="M410 73 C455 48 488 70 493 111 C497 151 470 178 438 187" fill="none" stroke="#9278ff" stroke-width="2" stroke-dasharray="5 9"/>
+                <circle class="motion-dot" cx="492" cy="111" r="5" fill="#8f79ff"/>
+              </svg>
+            </div>
+            <div class="plc-module" aria-label="PLC status">
+              <div class="plc-module-top"><span>PLC</span><b>RUN</b></div>
+              <div class="plc-module-body"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="plc-module-leds"><span></span><span></span><span></span><span></span></div>
+            </div>
+            <i class="trace t1"></i><i class="trace t2"></i><i class="trace t3"></i>
           </div>
           <div class="telemetry"><span>ROBOTICS</span><b>01</b><span>AUTOMATION</span><b>02</b><span>IoT</span><b>03</b></div>
         </div>
